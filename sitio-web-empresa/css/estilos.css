@@ -1,258 +1,72 @@
-/* =====================================
-   ESTILOS GENERALES
-===================================== */
+/* ===== Fastfood: personalización de Bootstrap 5.3 (solo colores de marca) ===== */
+:root,
+[data-bs-theme="light"] {
+    --bs-body-bg: #fbf7f0;
+    --bs-body-color: #2a2520;
+    --bs-secondary-color: #6b6358;
+    --bs-secondary-bg: #f3ebdc;
+    --bs-tertiary-bg: #f3ebdc;
+    --bs-border-color: #e8e0d2;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --bs-primary: #e0952c;
+    --bs-primary-rgb: 224, 149, 44;
+    --bs-success: #4a7c59;
+    --bs-success-rgb: 74, 124, 89;
+    --bs-dark: #2a2520;
+    --bs-dark-rgb: 42, 37, 32;
+
+    --bs-link-color: #b8741a;
+    --bs-link-color-rgb: 184, 116, 26;
+    --bs-link-hover-color: #8f5a14;
+    --bs-link-hover-color-rgb: 143, 90, 20;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f8f5;
-    color: #333;
-    line-height: 1.6;
+/* Botones (Bootstrap los pinta con valores fijos, por eso se redefinen) */
+.btn-primary {
+    --bs-btn-color: #2a2520;
+    --bs-btn-bg: #e0952c;
+    --bs-btn-border-color: #e0952c;
+    --bs-btn-hover-color: #2a2520;
+    --bs-btn-hover-bg: #c9811c;
+    --bs-btn-hover-border-color: #c9811c;
+    --bs-btn-active-color: #2a2520;
+    --bs-btn-active-bg: #b8741a;
+    --bs-btn-active-border-color: #b8741a;
+    --bs-btn-disabled-color: #2a2520;
+    --bs-btn-disabled-bg: #e0952c;
+    --bs-btn-disabled-border-color: #e0952c;
+    --bs-btn-focus-shadow-rgb: 224, 149, 44;
+    font-weight: 600;
+}
+.btn-dark {
+    --bs-btn-bg: #2a2520;
+    --bs-btn-border-color: #2a2520;
+    --bs-btn-hover-bg: #3d362f;
+    --bs-btn-hover-border-color: #3d362f;
+    --bs-btn-active-bg: #3d362f;
+    --bs-btn-active-border-color: #3d362f;
+}
+.btn-outline-dark {
+    --bs-btn-color: #2a2520;
+    --bs-btn-border-color: #2a2520;
+    --bs-btn-hover-bg: #2a2520;
+    --bs-btn-hover-border-color: #2a2520;
+    --bs-btn-active-bg: #2a2520;
+    --bs-btn-active-border-color: #2a2520;
 }
 
-/* =====================================
-   MENÚ DE NAVEGACIÓN
-===================================== */
-
-.navbar-empresa {
-    background-color: #14532d;
-    padding: 15px 0;
+/* Otros componentes con color fijo */
+.nav-pills {
+    --bs-nav-pills-link-active-color: #2a2520;
+    --bs-nav-pills-link-active-bg: #e0952c;
+}
+.progress { --bs-progress-bar-bg: #e0952c; }
+.form-control:focus,
+.form-select:focus {
+    border-color: #e0952c;
+    box-shadow: 0 0 0 .25rem rgba(224, 149, 44, .25);
 }
 
-.navbar-empresa .navbar-brand {
-    font-size: 24px;
-    color: white;
-}
-
-.navbar-empresa .nav-link {
-    color: white;
-    margin-left: 10px;
-    transition: color 0.3s;
-}
-
-.navbar-empresa .nav-link:hover,
-.navbar-empresa .nav-link.active {
-    color: #facc15;
-}
-
-/* =====================================
-   PORTADA PRINCIPAL
-===================================== */
-
-.hero {
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.55),
-        rgba(0, 0, 0, 0.55)
-    ),
-    url("https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600");
-
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 120px 20px;
-}
-
-.hero h1 {
-    font-size: 45px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-/* =====================================
-   BOTONES
-===================================== */
-
-.btn-principal {
-    background-color: #15803d;
-    color: white;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 6px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-principal:hover {
-    background-color: #166534;
-    color: white;
-}
-
-/* =====================================
-   TÍTULOS DE LAS PÁGINAS
-===================================== */
-
-.titulo-pagina {
-    background-color: #dcfce7;
-    padding: 65px 20px;
-    text-align: center;
-}
-
-.titulo-pagina h1 {
-    color: #14532d;
-    font-size: 38px;
-    font-weight: bold;
-}
-
-.titulo-pagina p {
-    color: #444;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-/* =====================================
-   SECCIONES
-===================================== */
-
-.seccion {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-.seccion h2 {
-    color: #14532d;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.seccion p {
-    font-size: 16px;
-}
-
-/* =====================================
-   TARJETAS
-===================================== */
-
-.tarjeta {
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.tarjeta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-}
-
-.tarjeta .card-title {
-    color: #166534;
-    font-weight: bold;
-}
-
-/* =====================================
-   INFORMACIÓN DE NOSOTROS
-===================================== */
-
-.tarjeta-informacion {
-    background-color: #e8f5e9;
-    border-left: 5px solid #15803d;
-    border-radius: 8px;
-    padding: 25px;
-    height: 100%;
-}
-
-.tarjeta-informacion h3 {
-    color: #14532d;
-    margin-bottom: 15px;
-}
-
-.imagen-decorativa {
-    min-height: 260px;
-    background: linear-gradient(
-        rgba(20, 83, 45, 0.4),
-        rgba(20, 83, 45, 0.4)
-    ),
-    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1000");
-
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.imagen-decorativa span {
-    color: white;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-/* =====================================
-   GALERÍA
-===================================== */
-
-.imagen-galeria {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-}
-
-/* =====================================
-   FORMULARIO
-===================================== */
-
-.form-control {
-    padding: 12px;
-    border-radius: 6px;
-}
-
-.form-control:focus {
-    border-color: #15803d;
-    box-shadow: 0 0 5px rgba(21, 128, 61, 0.3);
-}
-
-/* =====================================
-   PIE DE PÁGINA
-===================================== */
-
-.pie-pagina {
-    background-color: #14532d;
-    color: white;
-    padding: 25px 10px;
-    margin-top: 30px;
-}
-
-/* =====================================
-   DISEÑO RESPONSIVE
-===================================== */
-
-@media (max-width: 768px) {
-
-    .hero {
-        padding: 80px 15px;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    .titulo-pagina h1 {
-        font-size: 30px;
-    }
-
-    .seccion {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    .navbar-empresa .nav-link {
-        margin-left: 0;
-        padding: 8px 0;
-    }
-}
+/* Menú: resaltado naranja en hover y página activa */
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: #e0952c; }
