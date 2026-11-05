@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | EcoPutumayo</title>
+    <title>Contacto | Fastfood</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-empresa">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">EcoPutumayo</a>
-
-            <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal" aria-expanded="false"
-                aria-label="Mostrar navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <span class="bg-primary rounded px-2 fs-6">🍔</span> FASTFOOD
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+            aria-expanded="false" aria-label="Mostrar navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+        <li class="nav-item"><a class="nav-link" href="reserva.html">Reservas</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="cuenta.html">Mi cuenta</a></li>
+        <li class="nav-item"><a class="nav-link" href="carrito.html">🛒
+          <span class="badge text-bg-primary rounded-pill" id="contadorCarrito">0</span></a></li>
+        <li class="nav-item ms-lg-3"><a class="btn btn-primary btn-sm" href="admin.html">Panel admin</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <main>
         <section class="titulo-pagina">
@@ -84,11 +86,42 @@
         </section>
     </main>
 
-    <footer class="pie-pagina">
-        <div class="container text-center">
-            <p class="mb-0">© 2026 EcoPutumayo - Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <footer class="bg-dark text-light py-5 mt-5" data-bs-theme="dark">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3">
+        <strong>🍔 Fastfood</strong>
+        <p class="small text-secondary mt-2 mb-0">Sistema web de gestión integral para restaurantes.</p>
+      </div>
+      <div class="col-md-3">
+        <strong>Navegación</strong>
+        <ul class="list-unstyled small mt-2">
+          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="index.html">Inicio</a></li>
+          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="menu.html">Menú</a></li>
+          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="reserva.html">Reservas</a></li>
+          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="galeria.html">Galería</a></li>
+          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="nosotros.html">Nosotros</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <strong>Contacto</strong>
+        <ul class="list-unstyled small text-secondary mt-2">
+          <li>Mocoa, Putumayo</li>
+          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="contacto.html">contacto@fastfood.com</a></li>
+          <li>Lun–Dom · 11am–10pm</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <strong>Acceso</strong>
+        <ul class="list-unstyled small mt-2">
+          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="cuenta.html">Mi cuenta</a></li>
+          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="admin.html">Panel administrativo</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-center small text-secondary mt-4 mb-0">© 2026 Fastfood - Todos los derechos reservados.</p>
+  </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
