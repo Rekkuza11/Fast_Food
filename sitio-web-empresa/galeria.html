@@ -5,127 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería | Fastfood</title>
 
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Colores de marca -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-  <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <span class="bg-primary rounded px-2 fs-6">🍔</span> FASTFOOD
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
-            aria-expanded="false" aria-label="Mostrar navegación">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menuPrincipal">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
-        <li class="nav-item"><a class="nav-link" href="reserva.html">Reservas</a></li>
-        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
-        <li class="nav-item"><a class="nav-link" href="cuenta.html">Mi cuenta</a></li>
-        <li class="nav-item"><a class="nav-link" href="carrito.html">🛒
-          <span class="badge text-bg-primary rounded-pill" id="contadorCarrito">0</span></a></li>
-        <li class="nav-item ms-lg-3"><a class="btn btn-primary btn-sm" href="admin.html">Panel admin</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- Menú de navegación (lo pinta js/script.js) -->
+    <header id="navbar-ff"></header>
 
     <main>
-        <section class="titulo-pagina">
-            <div class="container text-center">
-                <h1>Nuestra galería</h1>
-                <p>Una muestra de la belleza de nuestro territorio.</p>
+        <section class="bg-body-secondary py-5 text-center">
+            <div class="container">
+                <h1 class="fw-bold">Nuestra galería</h1>
+                <p class="text-secondary mb-0">Instalaciones, ambiente y eventos del restaurante.</p>
             </div>
         </section>
 
-        <section class="container seccion">
-            <div class="row g-4">
-
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card tarjeta h-100">
-                        <img
-                            src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800"
-                            class="card-img-top imagen-galeria"
-                            alt="Bosque natural">
-                        <div class="card-body">
-                            <h3 class="card-title">Naturaleza</h3>
-                            <p class="card-text">Paisajes verdes y biodiversidad.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card tarjeta h-100">
-                        <img
-                            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800"
-                            class="card-img-top imagen-galeria"
-                            alt="Paisaje natural">
-                        <div class="card-body">
-                            <h3 class="card-title">Paisajes</h3>
-                            <p class="card-text">Lugares para explorar y disfrutar.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card tarjeta h-100">
-                        <img
-                            src="https://images.unsplash.com/photo-1511497584788-876760111969?w=800"
-                            class="card-img-top imagen-galeria"
-                            alt="Vegetación de un bosque">
-                        <div class="card-body">
-                            <h3 class="card-title">Biodiversidad</h3>
-                            <p class="card-text">La riqueza de nuestros ecosistemas.</p>
-                        </div>
-                    </div>
-                </div>
-
+        <section class="container py-5">
+            <div class="row g-3">
+                <div class="col-sm-6 col-lg-3"><div class="bg-secondary-subtle rounded-3 d-flex flex-column align-items-center justify-content-center" style="height:200px"><span class="fs-1">🏢</span><small class="mt-2 text-secondary">Fachada</small></div></div>
+                <div class="col-sm-6 col-lg-3"><div class="bg-warning-subtle rounded-3 d-flex flex-column align-items-center justify-content-center" style="height:200px"><span class="fs-1">🍷</span><small class="mt-2 text-secondary">Barra</small></div></div>
+                <div class="col-sm-6 col-lg-3"><div class="bg-success-subtle rounded-3 d-flex flex-column align-items-center justify-content-center" style="height:200px"><span class="fs-1">🌿</span><small class="mt-2 text-secondary">Terraza</small></div></div>
+                <div class="col-sm-6 col-lg-3"><div class="bg-danger-subtle rounded-3 d-flex flex-column align-items-center justify-content-center" style="height:200px"><span class="fs-1">🎉</span><small class="mt-2 text-secondary">Eventos</small></div></div>
+                <div class="col-sm-6 col-lg-3"><div class="bg-info-subtle rounded-3 d-flex flex-column align-items-center justify-content-center" style="height:200px"><span class="fs-1">🍰</span><small class="mt-2 text-secondary">Zona de postres</small></div></div>
+                <div class="col-sm-6 col-lg-3"><div class="bg-warning-subtle rounded-3 d-flex flex-column align-items-center justify-content-center" style="height:200px"><span class="fs-1">🪑</span><small class="mt-2 text-secondary">Salón principal</small></div></div>
+                <div class="col-sm-6 col-lg-3"><div class="bg-success-subtle rounded-3 d-flex flex-column align-items-center justify-content-center" style="height:200px"><span class="fs-1">👨‍🍳</span><small class="mt-2 text-secondary">Cocina abierta</small></div></div>
+                <div class="col-sm-6 col-lg-3"><div class="bg-danger-subtle rounded-3 d-flex flex-column align-items-center justify-content-center" style="height:200px"><span class="fs-1">🎶</span><small class="mt-2 text-secondary">Noche en vivo</small></div></div>
             </div>
+            <p class="small text-secondary mt-4">Reemplaza cada cuadro por una foto real del restaurante: <code>&lt;img src="img/foto.jpg" alt="Descripción" class="w-100 rounded-3 object-fit-cover" style="height:200px"&gt;</code>. Esta galería no incluye fotos de platos.</p>
         </section>
     </main>
 
-    <footer class="bg-dark text-light py-5 mt-5" data-bs-theme="dark">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-3">
-        <strong>🍔 Fastfood</strong>
-        <p class="small text-secondary mt-2 mb-0">Sistema web de gestión integral para restaurantes.</p>
-      </div>
-      <div class="col-md-3">
-        <strong>Navegación</strong>
-        <ul class="list-unstyled small mt-2">
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="index.html">Inicio</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="menu.html">Menú</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="reserva.html">Reservas</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="galeria.html">Galería</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="nosotros.html">Nosotros</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <strong>Contacto</strong>
-        <ul class="list-unstyled small text-secondary mt-2">
-          <li>Mocoa, Putumayo</li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="contacto.html">contacto@fastfood.com</a></li>
-          <li>Lun–Dom · 11am–10pm</li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <strong>Acceso</strong>
-        <ul class="list-unstyled small mt-2">
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="cuenta.html">Mi cuenta</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="admin.html">Panel administrativo</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="text-center small text-secondary mt-4 mb-0">© 2026 Fastfood - Todos los derechos reservados.</p>
-  </div>
-</footer>
+    <!-- Pie de página (lo pinta js/script.js) -->
+    <footer id="footer-ff"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -5,129 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros | Fastfood</title>
 
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Colores de marca -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-  <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <span class="bg-primary rounded px-2 fs-6">🍔</span> FASTFOOD
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
-            aria-expanded="false" aria-label="Mostrar navegación">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menuPrincipal">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
-        <li class="nav-item"><a class="nav-link" href="reserva.html">Reservas</a></li>
-        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
-        <li class="nav-item"><a class="nav-link" href="cuenta.html">Mi cuenta</a></li>
-        <li class="nav-item"><a class="nav-link" href="carrito.html">🛒
-          <span class="badge text-bg-primary rounded-pill" id="contadorCarrito">0</span></a></li>
-        <li class="nav-item ms-lg-3"><a class="btn btn-primary btn-sm" href="admin.html">Panel admin</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- Menú de navegación (lo pinta js/script.js) -->
+    <header id="navbar-ff"></header>
 
     <main>
-        <section class="titulo-pagina">
-            <div class="container text-center">
-                <h1>¿Quiénes somos?</h1>
-                <p>Conoce nuestra historia y nuestro compromiso.</p>
+        <section class="bg-body-secondary py-5 text-center">
+            <div class="container">
+                <h1 class="fw-bold">¿Quiénes somos?</h1>
+                <p class="text-secondary mb-0">Conoce Fastfood y nuestro compromiso.</p>
             </div>
         </section>
 
-        <section class="container seccion">
+        <section class="container py-5">
             <div class="row align-items-center g-4">
                 <div class="col-md-6">
-                    <h2>Nuestra historia</h2>
-                    <p>
-                        EcoPutumayo es una organización ficticia creada
-                        para promover el turismo responsable, la cultura
-                        y la riqueza natural del departamento del Putumayo.
-                    </p>
-                    <p>
-                        Nuestro propósito es brindar experiencias que
-                        permitan conocer y valorar nuestro territorio.
-                    </p>
+                    <h2 class="fw-bold">Nuestra historia</h2>
+                    <p>Fastfood nació en Mocoa, Putumayo, con una idea sencilla: que pedir, reservar y atender en un restaurante no dependa de libretas, llamadas ni hojas de cálculo.</p>
+                    <p>Hoy reunimos en una sola plataforma el menú digital, los pedidos, las reservas, la cocina y el inventario, para que clientes y personal estén siempre sincronizados.</p>
+                    <p class="mb-0"><strong>Horario:</strong> lunes a domingo, 11am a 10pm.<br><strong>Ubicación:</strong> Mocoa, Putumayo.</p>
                 </div>
-
                 <div class="col-md-6">
-                    <div class="imagen-decorativa">
-                        <span>PUTUMAYO</span>
-                    </div>
+                    <div class="bg-dark text-white rounded-4 d-flex align-items-center justify-content-center fw-bold fs-1" style="height:280px">🍔 FASTFOOD</div>
                 </div>
             </div>
-
-            <div class="row g-4 mt-4">
-                <div class="col-md-6">
-                    <div class="tarjeta-informacion">
-                        <h3>Misión</h3>
-                        <p>
-                            Promover experiencias turísticas responsables
-                            que valoren la naturaleza, la cultura y las
-                            comunidades del Putumayo.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="tarjeta-informacion">
-                        <h3>Visión</h3>
-                        <p>
-                            Ser reconocidos como una organización que
-                            contribuye al desarrollo turístico sostenible
-                            de la región.
-                        </p>
-                    </div>
-                </div>
+            <div class="row g-4 mt-2">
+                <div class="col-md-6"><div class="card border-0 border-start border-4 border-primary bg-body-secondary p-4 h-100"><h3 class="h5 fw-bold">Misión</h3>
+                    <p class="mb-0">Digitalizar y centralizar la operación de los restaurantes para que pedidos, reservas, cocina e inventario fluyan de forma ordenada y la experiencia del cliente mejore.</p></div></div>
+                <div class="col-md-6"><div class="card border-0 border-start border-4 border-primary bg-body-secondary p-4 h-100"><h3 class="h5 fw-bold">Visión</h3>
+                    <p class="mb-0">Ser la plataforma de referencia para la gestión de restaurantes pequeños y medianos de la región.</p></div></div>
+            </div>
+        </section>
+        <section class="container pb-5">
+            <h2 class="fw-bold mb-4">Servicios</h2>
+            <div class="row g-4">
+                <div class="col-md-4"><div class="card border-0 shadow-sm h-100 p-4"><div class="fs-1">🛵</div><h3 class="h5 fw-bold mt-2">Domicilios</h3><p class="text-secondary mb-0">Pide desde casa y sigue el estado de tu pedido.</p></div></div>
+                <div class="col-md-4"><div class="card border-0 shadow-sm h-100 p-4"><div class="fs-1">📅</div><h3 class="h5 fw-bold mt-2">Reservas</h3><p class="text-secondary mb-0">Elige fecha, hora y mesa sin llamadas ni esperas.</p></div></div>
+                <div class="col-md-4"><div class="card border-0 shadow-sm h-100 p-4"><div class="fs-1">🎂</div><h3 class="h5 fw-bold mt-2">Eventos privados</h3><p class="text-secondary mb-0">Celebra cumpleaños y reuniones con atención dedicada.</p></div></div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-dark text-light py-5 mt-5" data-bs-theme="dark">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-3">
-        <strong>🍔 Fastfood</strong>
-        <p class="small text-secondary mt-2 mb-0">Sistema web de gestión integral para restaurantes.</p>
-      </div>
-      <div class="col-md-3">
-        <strong>Navegación</strong>
-        <ul class="list-unstyled small mt-2">
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="index.html">Inicio</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="menu.html">Menú</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="reserva.html">Reservas</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="galeria.html">Galería</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="nosotros.html">Nosotros</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <strong>Contacto</strong>
-        <ul class="list-unstyled small text-secondary mt-2">
-          <li>Mocoa, Putumayo</li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="contacto.html">contacto@fastfood.com</a></li>
-          <li>Lun–Dom · 11am–10pm</li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <strong>Acceso</strong>
-        <ul class="list-unstyled small mt-2">
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="cuenta.html">Mi cuenta</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="admin.html">Panel administrativo</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="text-center small text-secondary mt-4 mb-0">© 2026 Fastfood - Todos los derechos reservados.</p>
-  </div>
-</footer>
+    <!-- Pie de página (lo pinta js/script.js) -->
+    <footer id="footer-ff"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

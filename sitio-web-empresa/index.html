@@ -7,137 +7,100 @@
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Estilos propios -->
+    <!-- Colores de marca -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-  <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <span class="bg-primary rounded px-2 fs-6">🍔</span> FASTFOOD
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
-            aria-expanded="false" aria-label="Mostrar navegación">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menuPrincipal">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
-        <li class="nav-item"><a class="nav-link" href="reserva.html">Reservas</a></li>
-        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
-        <li class="nav-item"><a class="nav-link" href="cuenta.html">Mi cuenta</a></li>
-        <li class="nav-item"><a class="nav-link" href="carrito.html">🛒
-          <span class="badge text-bg-primary rounded-pill" id="contadorCarrito">0</span></a></li>
-        <li class="nav-item ms-lg-3"><a class="btn btn-primary btn-sm" href="admin.html">Panel admin</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- Menú de navegación (lo pinta js/script.js) -->
+    <header id="navbar-ff"></header>
 
-    <!-- CONTENIDO PRINCIPAL -->
     <main>
-        <!--Hero-->
-        <section class="hero">
-  <div class="row g-0 align-items-stretch">
-    <div class="col-lg-6 p-5 d-flex flex-column justify-content-center">
-      <span class="etiqueta">Gestión de restaurantes · Todo en un solo lugar</span>
-      <h1 class="my-3">Pide, reserva y gestiona tu restaurante sin salir de una pantalla</h1>
-      <p>Centraliza el menú, los pedidos, las reservas y el inventario de tu restaurante en una sola plataforma, conectada en tiempo real con cocina y administración.</p>
-      <div class="d-flex gap-3 my-3">
-        <a href="menu.html" class="btn btn-principal">Ver menú digital</a>
-        <a href="reserva.html" class="btn btn-contorno">Reservar una mesa</a>
-      </div>
-      <div class="estadisticas d-flex gap-5 mt-3">
-        <div><strong>+120</strong><small>platos gestionados</small></div>
-        <div><strong>5–15</strong><small>colaboradores por local</small></div>
-        <div><strong>Tiempo real</strong><small>cocina ↔ meseros</small></div>
-      </div>
-    </div>
-    <div class="col-lg-6 hero-imagen">
-      <span class="chip-flotante"><strong>Mesa disponible</strong><br><small>Hoy, 8:00 PM</small></span>
-      <div class="plato-circulo">🍽️</div>
-    </div>
-  </div>
-</section>
+        <!-- Hero -->
+        <section>
+            <div class="row g-0">
+                <div class="col-lg-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+                    <span class="text-success fw-bold small text-uppercase">Gestión de restaurantes · Todo en un solo lugar</span>
+                    <h1 class="display-5 fw-bold my-3">Pide, reserva y gestiona tu restaurante sin salir de una pantalla</h1>
+                    <p class="text-secondary">Centraliza el menú, los pedidos, las reservas y el inventario de tu restaurante en una sola plataforma, conectada en tiempo real con cocina y administración.</p>
+                    <div class="d-flex flex-wrap gap-3 my-3">
+                        <a href="menu.html" class="btn btn-primary">Ver menú digital</a>
+                        <a href="reserva.html" class="btn btn-outline-dark">Reservar una mesa</a>
+                    </div>
+                    <div class="d-flex gap-4 gap-lg-5 mt-3">
+                        <div><strong class="d-block">+120</strong><small class="text-secondary">platos gestionados</small></div>
+                        <div><strong class="d-block">5–15</strong><small class="text-secondary">colaboradores por local</small></div>
+                        <div><strong class="d-block">Tiempo real</strong><small class="text-secondary">cocina ↔ meseros</small></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 position-relative d-flex align-items-center justify-content-center py-5"
+                     style="min-height:400px;background:radial-gradient(circle at 30% 25%,#7a5a22 0,#2a2520 60%)">
+                    <div class="position-absolute top-0 end-0 m-4 bg-white rounded shadow-sm px-3 py-2 small">
+                        <strong>Mesa disponible</strong><br><span class="text-secondary">Hoy, 8:00 PM</span>
+                    </div>
+                    <div class="bg-body rounded-circle d-flex align-items-center justify-content-center" style="width:225px;height:225px;font-size:90px">🍽️</div>
+                </div>
+            </div>
+        </section>
 
-<!--Menú destacado-->
-<section class="container seccion">
-  <div class="d-flex justify-content-between align-items-end mb-4">
-    <div><h2 class="mb-1">Menú destacado</h2>
-    <p class="mb-0 text-muted">Lo más pedido esta semana, actualizado en tiempo real por administración.</p></div>
-    <a href="menu.html">Ver menú completo →</a>
-  </div>
-  <div class="row g-4" id="destacados"></div>
-</section>
+        <!-- Menú destacado (lo llena js/script.js) -->
+        <section class="container py-5">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <h2 class="fw-bold mb-1">Menú destacado</h2>
+                    <p class="text-secondary mb-0">Lo más pedido esta semana, actualizado en tiempo real por administración.</p>
+                </div>
+                <a href="menu.html" class="fw-semibold small text-decoration-none">Ver menú completo →</a>
+            </div>
+            <div class="row g-4" id="destacados"></div>
+        </section>
 
-<!--Bloque de reserva-->
-<section class="container seccion">
-  <div class="bloque-reserva">
-    <div class="row align-items-center g-4">
-      <div class="col-md-5">
-        <h2 class="text-white">Reserva tu mesa en segundos</h2>
-        <p>Consulta la disponibilidad en tiempo real y confirma tu reserva sin llamadas ni esperas telefónicas.</p>
-      </div>
-      <div class="col-md-7"><div class="formulario">
-        <form action="reserva.html" method="get">
-          <div class="row g-3">
-            <div class="col-6"><label class="form-label small">FECHA</label><input type="date" name="fecha" class="form-control"></div>
-            <div class="col-6"><label class="form-label small">HORA</label><input type="time" name="hora" class="form-control"></div>
-            <div class="col-6"><label class="form-label small">N° DE PERSONAS</label><input type="number" name="personas" min="1" max="12" class="form-control"></div>
-            <div class="col-6"><label class="form-label small">TELÉFONO</label><input type="tel" name="telefono" class="form-control"></div>
-            <div class="col-12"><button class="btn btn-principal w-100">Confirmar reserva</button></div>
-          </div>
-        </form>
-      </div></div>
-    </div>
-  </div>
-</section>
+        <!-- Reserva rápida -->
+        <section class="container py-5">
+            <div class="bg-dark text-white rounded-4 p-4 p-md-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-5">
+                        <h2 class="fw-bold">Reserva tu mesa en segundos</h2>
+                        <p class="text-white-50">Consulta la disponibilidad en tiempo real y confirma tu reserva sin llamadas ni esperas telefónicas.</p>
+                    </div>
+                    <div class="col-md-7">
+                        <form action="reserva.html" method="get" class="bg-white text-body rounded-3 p-4">
+                            <div class="row g-3">
+                                <div class="col-6"><label class="form-label small fw-semibold text-uppercase" for="fechaR">Fecha</label><input type="date" id="fechaR" name="fecha" class="form-control"></div>
+                                <div class="col-6"><label class="form-label small fw-semibold text-uppercase" for="horaR">Hora</label><input type="time" id="horaR" name="hora" class="form-control"></div>
+                                <div class="col-6"><label class="form-label small fw-semibold text-uppercase" for="personasR">N° de personas</label><input type="number" id="personasR" name="personas" min="1" max="12" class="form-control"></div>
+                                <div class="col-6"><label class="form-label small fw-semibold text-uppercase" for="telR">Teléfono</label><input type="tel" id="telR" name="telefono" class="form-control"></div>
+                                <div class="col-12"><button class="btn btn-primary w-100">Confirmar reserva</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería (vista previa) -->
+        <section class="container py-5">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div><h2 class="fw-bold mb-1">Galería</h2><p class="text-secondary mb-0">Instalaciones y ambiente del restaurante.</p></div>
+                <a href="galeria.html" class="fw-semibold small text-decoration-none">Ver galería completa →</a>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-6"><div class="bg-secondary-subtle rounded-3 d-flex align-items-center justify-content-center fs-1" style="height:412px">🏢</div></div>
+                <div class="col-lg-6"><div class="row g-3">
+                    <div class="col-6"><div class="bg-warning-subtle rounded-3 d-flex align-items-center justify-content-center fs-1" style="height:200px">🍷</div></div>
+                    <div class="col-6"><div class="bg-success-subtle rounded-3 d-flex align-items-center justify-content-center fs-1" style="height:200px">🌿</div></div>
+                    <div class="col-6"><div class="bg-danger-subtle rounded-3 d-flex align-items-center justify-content-center fs-1" style="height:200px">🎉</div></div>
+                    <div class="col-6"><div class="bg-info-subtle rounded-3 d-flex align-items-center justify-content-center fs-1" style="height:200px">🍰</div></div>
+                </div></div>
+            </div>
+        </section>
     </main>
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="bg-dark text-light py-5 mt-5" data-bs-theme="dark">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-3">
-        <strong>🍔 Fastfood</strong>
-        <p class="small text-secondary mt-2 mb-0">Sistema web de gestión integral para restaurantes.</p>
-      </div>
-      <div class="col-md-3">
-        <strong>Navegación</strong>
-        <ul class="list-unstyled small mt-2">
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="index.html">Inicio</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="menu.html">Menú</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="reserva.html">Reservas</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="galeria.html">Galería</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="nosotros.html">Nosotros</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <strong>Contacto</strong>
-        <ul class="list-unstyled small text-secondary mt-2">
-          <li>Mocoa, Putumayo</li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="contacto.html">contacto@fastfood.com</a></li>
-          <li>Lun–Dom · 11am–10pm</li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <strong>Acceso</strong>
-        <ul class="list-unstyled small mt-2">
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="cuenta.html">Mi cuenta</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="admin.html">Panel administrativo</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="text-center small text-secondary mt-4 mb-0">© 2026 Fastfood - Todos los derechos reservados.</p>
-  </div>
-</footer>
+    <!-- Pie de página (lo pinta js/script.js) -->
+    <footer id="footer-ff"></footer>
 
-    <!-- Bootstrap JavaScript: necesario para el menú desplegable -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

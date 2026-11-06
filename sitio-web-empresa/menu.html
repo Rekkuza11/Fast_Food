@@ -3,135 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios | Fastfood</title>
+    <title>Menú | Fastfood</title>
 
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Colores de marca -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-  <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <span class="bg-primary rounded px-2 fs-6">🍔</span> FASTFOOD
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
-            aria-expanded="false" aria-label="Mostrar navegación">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menuPrincipal">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
-        <li class="nav-item"><a class="nav-link" href="reserva.html">Reservas</a></li>
-        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
-        <li class="nav-item"><a class="nav-link" href="cuenta.html">Mi cuenta</a></li>
-        <li class="nav-item"><a class="nav-link" href="carrito.html">🛒
-          <span class="badge text-bg-primary rounded-pill" id="contadorCarrito">0</span></a></li>
-        <li class="nav-item ms-lg-3"><a class="btn btn-primary btn-sm" href="admin.html">Panel admin</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- Menú de navegación (lo pinta js/script.js) -->
+    <header id="navbar-ff"></header>
 
     <main>
-        <section class="titulo-pagina">
-            <div class="container text-center">
-                <h1>Nuestros servicios</h1>
-                <p>Experiencias para descubrir y disfrutar el Putumayo.</p>
+        <section class="bg-body-secondary py-5 text-center">
+            <div class="container">
+                <h1 class="fw-bold">Nuestro menú</h1>
+                <p class="text-secondary mb-0">Elige tus platos favoritos y arma tu pedido.</p>
             </div>
         </section>
 
-        <section class="container seccion">
-            <div class="row g-4">
-
-                <div class="col-md-4">
-                    <div class="card tarjeta h-100">
-                        <div class="card-body">
-                            <h3 class="card-title">Turismo ecológico</h3>
-                            <p class="card-text">
-                                Recorridos por paisajes naturales,
-                                senderos y espacios de biodiversidad.
-                            </p>
-                            <a href="contacto.html" class="btn btn-principal">
-                                Más información
-                            </a>
-                        </div>
-                    </div>
+        <section class="container py-5">
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <input type="search" id="buscador" class="form-control" placeholder="Buscar plato…" aria-label="Buscar plato">
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card tarjeta h-100">
-                        <div class="card-body">
-                            <h3 class="card-title">Guianza turística</h3>
-                            <p class="card-text">
-                                Acompañamiento durante recorridos para
-                                conocer la historia y cultura regional.
-                            </p>
-                            <a href="contacto.html" class="btn btn-principal">
-                                Más información
-                            </a>
-                        </div>
-                    </div>
+                <div class="col-md-6 d-flex flex-wrap gap-2" id="filtros">
+                    <button class="btn btn-sm btn-dark" data-cat="todas">Todas</button>
+                    <button class="btn btn-sm btn-outline-dark" data-cat="entradas">Entradas</button>
+                    <button class="btn btn-sm btn-outline-dark" data-cat="fuertes">Fuertes</button>
+                    <button class="btn btn-sm btn-outline-dark" data-cat="postres">Postres</button>
+                    <button class="btn btn-sm btn-outline-dark" data-cat="bebidas">Bebidas</button>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card tarjeta h-100">
-                        <div class="card-body">
-                            <h3 class="card-title">Experiencias culturales</h3>
-                            <p class="card-text">
-                                Actividades para conocer las tradiciones,
-                                gastronomía y expresiones culturales.
-                            </p>
-                            <a href="contacto.html" class="btn btn-principal">
-                                Más información
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+            <div class="row g-4" id="listaPlatos"></div>
         </section>
     </main>
 
-    <footer class="bg-dark text-light py-5 mt-5" data-bs-theme="dark">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-3">
-        <strong>🍔 Fastfood</strong>
-        <p class="small text-secondary mt-2 mb-0">Sistema web de gestión integral para restaurantes.</p>
-      </div>
-      <div class="col-md-3">
-        <strong>Navegación</strong>
-        <ul class="list-unstyled small mt-2">
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="index.html">Inicio</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="menu.html">Menú</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="reserva.html">Reservas</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="galeria.html">Galería</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="nosotros.html">Nosotros</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <strong>Contacto</strong>
-        <ul class="list-unstyled small text-secondary mt-2">
-          <li>Mocoa, Putumayo</li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="contacto.html">contacto@fastfood.com</a></li>
-          <li>Lun–Dom · 11am–10pm</li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <strong>Acceso</strong>
-        <ul class="list-unstyled small mt-2">
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="cuenta.html">Mi cuenta</a></li>
-          <li><a class="link-light link-underline-opacity-0 link-opacity-75-hover" href="admin.html">Panel administrativo</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="text-center small text-secondary mt-4 mb-0">© 2026 Fastfood - Todos los derechos reservados.</p>
-  </div>
-</footer>
+    <!-- Pie de página (lo pinta js/script.js) -->
+    <footer id="footer-ff"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
