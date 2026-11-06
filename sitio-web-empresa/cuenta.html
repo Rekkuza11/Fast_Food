@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi cuenta | Fastfood</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Colores de marca -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Menú de navegación (lo pinta js/script.js) -->
+    <header id="navbar-ff"></header>
+
+    <main>
+        <section class="bg-body-secondary py-5 text-center">
+            <div class="container">
+                <h1 class="fw-bold">Mi cuenta</h1>
+                <p class="text-secondary mb-0">Inicia sesión o crea tu cuenta para ver tu historial de pedidos.</p>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div id="msgCuenta"></div>
+
+            <!-- Sin sesión -->
+            <div id="vistaAcceso" class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card border-0 shadow-sm p-4">
+                        <ul class="nav nav-tabs mb-4" role="tablist">
+                            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabLogin" type="button">Iniciar sesión</button></li>
+                            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabRegistro" type="button">Registrarme</button></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="tabLogin">
+                                <form id="formLogin">
+                                    <div class="mb-3"><label class="form-label" for="correoLogin">Correo electrónico</label><input type="email" id="correoLogin" class="form-control" required></div>
+                                    <div class="mb-3"><label class="form-label" for="claveLogin">Contraseña</label><input type="password" id="claveLogin" class="form-control" required></div>
+                                    <button class="btn btn-primary w-100">Entrar</button>
+                                </form>
+                                <p class="small text-secondary mt-3 mb-0">Usuarios de prueba (clave 1234): cliente@fastfood.com · cocina@fastfood.com · admin@fastfood.com</p>
+                            </div>
+                            <div class="tab-pane fade" id="tabRegistro">
+                                <form id="formRegistro" novalidate>
+                                    <div class="mb-3"><label class="form-label" for="nombreReg">Nombre completo</label><input type="text" id="nombreReg" class="form-control" required></div>
+                                    <div class="mb-3"><label class="form-label" for="correoReg">Correo electrónico</label><input type="email" id="correoReg" class="form-control" required></div>
+                                    <div class="mb-3"><label class="form-label" for="telReg">Teléfono</label><input type="tel" id="telReg" class="form-control" required></div>
+                                    <div class="mb-3"><label class="form-label" for="claveReg">Contraseña (mín. 4 caracteres)</label><input type="password" id="claveReg" class="form-control" minlength="4" required></div>
+                                    <button class="btn btn-primary w-100">Crear cuenta</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Con sesión -->
+            <div id="vistaCuenta" class="d-none">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm p-4">
+                            <h2 class="h5 fw-bold" id="saludoCuenta"></h2>
+                            <ul class="small text-secondary ps-3" id="datosCuenta"></ul>
+                            <div id="accesosRol" class="mb-3"></div>
+                            <button class="btn btn-outline-dark btn-sm" id="btnSalir">Cerrar sesión</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 class="h5 fw-bold">Historial de pedidos</h2>
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead><tr><th>N°</th><th>Fecha</th><th>Pedido</th><th>Total</th><th>Estado</th></tr></thead>
+                                <tbody id="tablaHistorial"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página (lo pinta js/script.js) -->
+    <footer id="footer-ff"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

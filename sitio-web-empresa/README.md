@@ -1,22 +1,34 @@
-# Proyecto EcoPutumayo
+# Fastfood – Sistema Web de Gestión Integral para Restaurantes
 
-Sitio web empresarial desarrollado como proyecto académico.
+Proyecto académico de Programación Orientada a la Web.
 
-## Tecnologías utilizadas
+## Tecnologías
+HTML5 · CSS3 · Bootstrap 5.3 · JavaScript (datos simulados con `localStorage`)
 
-- HTML5
-- CSS3
-- Bootstrap 5
+## Vistas
+| Archivo | Vista |
+|---|---|
+| `index.html` | Inicio |
+| `menu.html` | Menú con búsqueda y filtros |
+| `detalle-plato.html` | Detalle del plato (`?id=`) |
+| `carrito.html` | Carrito / pedido |
+| `reserva.html` | Reserva de mesas |
+| `cuenta.html` | Registro, inicio de sesión e historial |
+| `galeria.html` | Galería del restaurante |
+| `nosotros.html` | Historia, misión, visión y servicios |
+| `contacto.html` | Contacto, mapa y formulario |
+| `cocina.html` | Tablero de cocina (rol cocina/admin) |
+| `admin.html` | Panel administrativo (rol admin) |
 
-## Páginas del sitio
+## Estructura
+```
+css/estilos.css   Colores de marca sobre Bootstrap
+js/datos.js       Datos de ejemplo (menú, inventario, mesas, usuarios)
+js/script.js      Navbar/footer, carrito, reservas, cuenta, cocina y admin
+```
 
-- Inicio
-- Nosotros
-- Servicios
-- Galería
-- Contacto
+## Usuarios de prueba (clave 1234)
+`cliente@fastfood.com` · `cocina@fastfood.com` · `admin@fastfood.com`
 
-## Descripción
-
-Sitio web diseñado para presentar información sobre una
-organización turística del departamento del Putumayo.
+## Nota
+Los datos viven en `localStorage` del navegador: es una simulación para la etapa académica, sin seguridad real. En una etapa posterior se integrarían backend y base de datos. Para reiniciar los datos: F12 → Application → Local Storage → Clear.

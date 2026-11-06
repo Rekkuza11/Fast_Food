@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocina | Fastfood</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Colores de marca -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Menú de navegación (lo pinta js/script.js) -->
+    <header id="navbar-ff"></header>
+
+    <main>
+        <section class="bg-body-secondary py-5 text-center">
+            <div class="container">
+                <h1 class="fw-bold">Cocina · Pedidos en tiempo real</h1>
+                <p class="text-secondary mb-0">Se actualiza solo cada 5 segundos. Avanza cada pedido con el botón de su tarjeta.</p>
+            </div>
+        </section>
+
+        <section class="container-fluid py-5 px-4">
+            <div class="row g-4">
+                <div class="col-md-4"><h2 class="h5 fw-bold">🔴 Pendientes</h2><div class="bg-body-secondary rounded-3 p-3" style="min-height:300px" id="colPendiente"></div></div>
+                <div class="col-md-4"><h2 class="h5 fw-bold">🟠 En preparación</h2><div class="bg-body-secondary rounded-3 p-3" style="min-height:300px" id="colPreparacion"></div></div>
+                <div class="col-md-4"><h2 class="h5 fw-bold">🟢 Listos para entregar</h2><div class="bg-body-secondary rounded-3 p-3" style="min-height:300px" id="colListo"></div></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página (lo pinta js/script.js) -->
+    <footer id="footer-ff"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
